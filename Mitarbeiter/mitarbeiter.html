@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitarbeiter - Interne Software</title>
+    <link rel="stylesheet"  href="mitarbeiter.css">    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchBox = document.querySelector('.search-box');
+            const employeeItems = document.querySelectorAll('.employee');
+
+            searchBox.addEventListener('input', () => {
+                const searchTerm = searchBox.value.toLowerCase();
+                employeeItems.forEach(item => {
+                    const name = item.querySelector('.name').textContent.toLowerCase();
+                    const title = item.querySelector('.title').textContent.toLowerCase();
+                    const phone = item.querySelector('.phone').textContent.toLowerCase();
+                    if (name.includes(searchTerm) || title.includes(searchTerm) || phone.includes(searchTerm)) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Mitarbeiter</h1>
+
+    <div class="container">
+        <!-- Suchfeld -->
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="Mitarbeiter suchen...">
+        </div>
+
+        <!-- Mitarbeiterliste -->
+        <div class="employee-list">
+            <div class="employee">
+                <div class="name">Amin Mohamed Douioui</div>
+                <div class="title">CTO</div>
+                <div class="phone">+49 170 1234567</div>
+            </div>
+            <div class="employee">
+                <div class="name">Sebastian Spuhler</div>
+                <div class="title">CEO</div>
+                <div class="phone">+49 170 7654321</div>
+            </div>
+            <div class="employee">
+                <div class="name">Jan Kononenko</div>
+                <div class="title">Vertrieb</div>
+                <div class="phone">+49 170 1122334</div>
+            </div>
+            <div class="employee">
+                <div class="name">Laura Becker</div>
+                <div class="title">Marketing Specialist</div>
+                <div class="phone">+49 170 5566778</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #ffffff;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .section {
+            width: 100%;
+            background: linear-gradient(145deg, #2e2e2e, #121212);
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px #0f0f0f, -5px -5px 15px #252525;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .section h2 {
+            font-size: 2em;
+            color: #00e676;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .process-category {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .process-category h3 {
+            font-size: 1.5em;
+            color: #00e676;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .process-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .process-list li {
+            background-color: #2e2e2e;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            text-align: left;
+            position: relative;
+        }
+
+        .process-list li:hover {
+            background-color: #333333;
+            box-shadow: 0px 0px 10px #00e676;
+        }
+
+        .process-list a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .process-list a:hover {
+            color: #00e676;
+            text-decoration: underline;
+        }
+
+        .process-list .description {
+            display: none;
+            margin-top: 10px;
+            font-size: 1em;
+            color: #e0e0e0;
+        }
+
+        .process-list li.active .description {
+            display: block;
+        }
+
+        .toggle-description {
+            color: #00e676;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-top: 5px;
+            display: inline-block;
+        }

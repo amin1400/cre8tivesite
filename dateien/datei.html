@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dateien - Interne Software</title>
+    <link rel="stylesheet" href="datei.css">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Dateien</h1>
+
+        <!-- Suchfeld -->
+        <div class="search-container">
+            <input type="text" id="search" class="search-input" placeholder="Suche nach Dateien...">
+        </div>
+
+        <!-- Dateiupload-Feld -->
+        <div class="upload-container">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" id="file">
+                <button type="submit">Datei hochladen</button>
+            </form>
+        </div>
+
+        <!-- Liste der Dateien -->
+        <div class="file-list" id="file-list">
+            <!-- Beispielhafte Dateiliste -->
+            <div class="file-item">
+                <h2><a href="path/to/file1.pdf" download>Dateiname 1.pdf</a></h2>
+                <p>Hochgeladen am: 2024-08-19, von: Benutzer A</p>
+            </div>
+            <div class="file-item">
+                <h2><a href="path/to/file2.docx" download>Dateiname 2.docx</a></h2>
+                <p>Hochgeladen am: 2024-08-18, von: Benutzer B</p>
+            </div>
+            <!-- Weitere Dateieinträge hier hinzufügen -->
+        </div>
+    </div>
+
+    <script>
+        // JavaScript für die Suchfunktion
+        document.getElementById('search').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const fileItems = document.querySelectorAll('.file-item');
+
+            fileItems.forEach(function(item) {
+                const fileName = item.querySelector('h2').textContent.toLowerCase();
+                if (fileName.includes(searchTerm)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

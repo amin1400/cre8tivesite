@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prozesse - Interne Software</title>
+    <link rel="stylesheet" href="prozesse.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.toggle-description').forEach(button => {
+                button.addEventListener('click', () => {
+                    const li = button.closest('li');
+                    li.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Prozesse</h1>
+
+    <div class="container">
+        <!-- Prozess-Kategorien -->
+        <div class="process-category">
+            <h3>Kategorie 1: Operations</h3>
+            <ul class="process-list">
+                <li>
+                    <a href="#">Prozess 1: Auftragsabwicklung</a>
+                    <p class="description">Beschreibung: Dieser Prozess beschreibt die Schritte, die zur Abwicklung eines Auftrags erforderlich sind, von der Bestellung bis zur Lieferung.</p>
+                    <span class="toggle-description">Mehr erfahren</span>
+                </li>
+                <li>
+                    <a href="#">Prozess 2: Lagerverwaltung</a>
+                    <p class="description">Beschreibung: Dieser Prozess umfasst die Verwaltung und Organisation des Lagerbestands, einschließlich der Ein- und Auslagerung von Waren.</p>
+                    <span class="toggle-description">Mehr erfahren</span>
+                </li>
+                <li>
+                    <a href="#">Prozess 3: Lieferkettenmanagement</a>
+                    <p class="description">Beschreibung: Dieser Prozess behandelt das Management der gesamten Lieferkette, von der Beschaffung der Rohstoffe bis zur Auslieferung der Endprodukte.</p>
+                    <span class="toggle-description">Mehr erfahren</span>
+                </li>
+            </ul>
+
+            <h3>Kategorie 2: Personal</h3>
+            <ul class="process-list">
+                <li>
+                    <a href="#">Prozess 1: Rekrutierung</a>
+                    <p class="description">Beschreibung: Dieser Prozess beschreibt die Schritte, die zur Rekrutierung neuer Mitarbeiter durchgeführt werden, einschließlich Stellenausschreibungen und Interviews.</p>
+                    <span class="toggle-description">Mehr erfahren</span>
+                </li>
+                <li>
+                    <a href="#">Prozess 2: Onboarding</a>
+                    <p class="description">Beschreibung: Dieser Prozess umfasst die Einführung neuer Mitarbeiter in das Unternehmen, einschließlich Schulungen und Einarbeitungen.</p>
+                    <span class="toggle-description">Mehr erfahren</span>
+                </li>
+                <li>
+                    <a href="#">Prozess 3: Leistungsbewertung</a>
+                    <p class="description">Beschreibung: Dieser Prozess behandelt die Bewertung der Mitarbeiterleistungen, um die Leistung zu überprüfen und Entwicklungsmöglichkeiten zu identifizieren.</p>
+                    <span class="toggle-description">Mehr erfahren</span>
+                </li>
+            </ul>
+
+            <h3>Kategorie 3: Finanzen</h3>
+            <ul class="process-list">
+                <li>
+                    <a href="#">Prozess 1: Rechnungsstellung</a>
+                    <p class="description">Beschreibung: Dieser Prozess beschreibt die Erstellung und Verwaltung von Rechnungen, einschließlich der Verfolgung von Zahlungen und offenen Posten.</p>
+                    <span class="toggle-description">Mehr erfahren</span>
+                </li>
+                <li>
+                    <a href="#">Prozess 2: Budgetierung</a>
+                    <p class="description">Beschreibung: Dieser Prozess umfasst die Erstellung und Überwachung von Budgets zur Steuerung der finanziellen Mittel des Unternehmens.</p>
+                    <span class="toggle-description">Mehr erfahren</span>
+                </li>
+                <li>
+                    <a href="#">Prozess 3: Finanzberichterstattung</a>
+                    <p class="description">Beschreibung: Dieser Prozess befasst sich mit der Erstellung von Finanzberichten zur Übersicht und Analyse der Unternehmensfinanzen.</p>
+                    <span class="toggle-description">Mehr erfahren</span>
+                </li>
+            </ul>
+
+            <h3>Kategorie 4: IT</h3>
+            <ul class="process-list">
+                <li>
+                    <a href="#">Prozess 1: Systemwartung</a>
+                    <p class="description">Beschreibung: Dieser Prozess beschreibt die regelmäßige Wartung und Aktualisierung der IT-Systeme, um ihre Sicherheit und Leistung zu gewährleisten.</p>
+                    <span class="toggle-description">Mehr erfahren</span>
+                </li>
+                <li>
+                    <a href="#">Prozess 2: Datensicherung</a>
+                    <p class="description">Beschreibung: Dieser Prozess umfasst die Sicherstellung der Datensicherheit durch regelmäßige Backups und Wiederherstellungstests.</p>
+                    <span class="toggle-description">Mehr erfahren</span>
+                </li>
+                <li>
+                    <a href="#">Prozess 3: Software-Updates</a>
+                    <p class="description">Beschreibung: Dieser Prozess befasst sich mit der regelmäßigen Aktualisierung und Wartung von Software, um Fehlerbehebungen und neue Funktionen zu integrieren.</p>
+                    <span class="toggle-description">Mehr erfahren</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
